@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Slide Show</title>
+
+<style>
+  .slideshow-container {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+  }
+  .slide {
+    display: none;
+    width: 100%;
+  }
+  .slide img {
+    width: 100%;
+    height: auto;
+  }
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  .prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  .play-stop {
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+  }
+</style>
+</head>
+<h1 style="text-align: center;">Slide Show</h1>
+<body>
+
+<div class="slideshow-container">
+  <div class="slide">
+    <img src="https://images.bewakoof.com/uploads/grid/app/Classic-Fit-Tshirt-Common-1x1-banner-1709289795.jpg" alt="Slide 1">
+  </div>
+  <div class="slide">
+    <img src="https://images.pexels.com/photos/757889/pexels-photo-757889.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Slide 2">
+  </div>
+  <div class="slide">
+    <img src="https://images.pexels.com/photos/15851686/pexels-photo-15851686.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=279.825&fit=crop&h=453.05" alt="Slide 3">
+  </div>
+  <div class="slide">
+    <img src="https://images.pexels.com/photos/250591/pexels-photo-250591.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Slide 4">
+  </div>
+  <div class="slide">
+    <img src="https://images.pexels.com/photos/697259/pexels-photo-697259.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Slide 5">
+  </div>
+  <div class="slide">
+    <img src="https://images.pexels.com/photos/74512/pexels-photo-74512.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Slide 6">
+  </div>
+  <div class="slide">
+    <img src="https://images.pexels.com/photos/600114/pexels-photo-600114.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Slide 7">
+  </div>
+  <div class="slide">
+    <img src="https://images.pexels.com/photos/424134/pexels-photo-424134.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Slide 8">
+  </div>
+  <div class="slide">
+    <img src="https://images.pexels.com/photos/381739/pexels-photo-381739.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Slide 9">
+  </div>
+  <div class="slide">
+    <img src="https://images.pexels.com/photos/1187079/pexels-photo-1187079.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Slide 10">
+  </div>
+  <div class="slide">
+    <img src="https://images.pexels.com/photos/788716/pexels-photo-788716.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Slide 11">
+  </div>
+  <div class="slide">
+    <img src="https://images.pexels.com/photos/1058356/pexels-photo-1058356.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Slide 12">
+  </div>
+  <div class="slide">
+    <img src="https://images.pexels.com/photos/548399/pexels-photo-548399.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Slide 13">
+  </div>
+  <div class="slide">
+    <img src="https://images.pexels.com/photos/931168/pexels-photo-931168.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Slide 14">
+  </div>
+  <div class="slide">
+    <img src="https://images.pexels.com/photos/714918/pexels-photo-714918.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Slide 15">
+  </div>
+  <div class="slide">
+    <img src="https://images.pexels.com/photos/3750764/pexels-photo-3750764.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Slide 16">
+  </div>
+  <div class="slide">
+    <img src="https://images.pexels.com/photos/2251822/pexels-photo-2251822.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Slide 17">
+  </div>
+  <div class="slide">
+    <img src="https://images.pexels.com/photos/298246/pexels-photo-298246.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Slide 18">
+  </div>
+  <div class="slide">
+    <img src="https://images.pexels.com/photos/68507/spring-flowers-flowers-collage-floral-68507.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Slide 19">
+  </div>
+  <div class="slide">
+    <img src="https://images.pexels.com/photos/931162/pexels-photo-931162.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Slide 20">
+  </div>
+  <!-- Add more slides here -->
+  
+  <a class="prev">&#10094;</a>
+  <a class="next">&#10095;</a>
+  <div class="play-stop">&#9658;</div>
+</div>
+
+<script>
+  let slideIndex = 0;
+  let slides = document.querySelectorAll('.slide');
+  let playStopButton = document.querySelector('.play-stop');
+  let timer;
+
+  function showSlides() {
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = 'none';  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    slides[slideIndex - 1].style.display = 'block';  
+    timer = setTimeout(showSlides, 2000); // Change image every 2 seconds
+  }
+
+  function stopSlides() {
+    clearTimeout(timer);
+  }
+
+  function plusSlides(n) {
+    stopSlides();
+    showSlide(slideIndex += n);
+  }
+
+  function currentSlide(n) {
+    stopSlides();
+    showSlide(slideIndex = n);
+  }
+
+  function showSlide(n) {
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = 'none';  
+    }
+    slides[slideIndex - 1].style.display = 'block';  
+  }
+
+  playStopButton.addEventListener('click', function() {
+    let icon = playStopButton.innerHTML;
+    if (icon === '►') {
+      playStopButton.innerHTML = '❚❚';
+      showSlides();
+    } else {
+      playStopButton.innerHTML = '►';
+      stopSlides();
+    }
+  });
+
+  document.querySelector('.prev').addEventListener('click', () => plusSlides(-1));
+  document.querySelector('.next').addEventListener('click', () => plusSlides(1));
+</script>
+
+</body>
+</html>
